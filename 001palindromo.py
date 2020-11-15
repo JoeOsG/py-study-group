@@ -1,12 +1,18 @@
-palabra = 'Anitalavalatina'
-espalindromo = 1
-contador = 1
-for letra in palabra:
-    if letra.lower() != palabra[contador*-1].lower():
-        espalindromo = 0
-    contador+=1
+def espalindromo(frase):
+    espalindromo = 1
+    contador = 1
+    for letra in frase:
+        if letra.lower() != frase[contador*-1].lower():
+            espalindromo = 0
+        
+        contador+=1
+    
+    if espalindromo == 0:
+        print ("«" + frase + "» no es un palíndromo")
+    else:
+        print ("ÉXITO la frase «" + frase + "» es un palíndromo")
 
-if espalindromo == 0:
-    print ("no es")
-else:
-    print ("si es")
+
+
+espalindromo('Anitalavalatina')
+espalindromo('xAnitalavalatina')
